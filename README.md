@@ -1,6 +1,7 @@
-📡 Tópicos Avançados em IoT e Machine Learning – TP557
-Repositório dedicado à disciplina TP557 - Tópicos Avançados em IoT e Machine Learning, com foco em projetos, anotações e estudos relacionados às tecnologias emergentes da Internet das Coisas (IoT) e Aprendizado de Máquina (Machine Learning).
-📂 Sobre a Disciplina
+# 📡 Tópicos Avançados em IoT e Machine Learning – TP557
+Repositório dedicado à disciplina TP557 - Tópicos Avançados em IoT e Machine Learning, com foco em projetos, anotações e estudos relacionados às tecnologias emergentes da Internet das Coisas (IoT) e Aprendizado de Máquina (MachineLearning).
+
+# 📂 Sobre a Disciplina
 Esta matéria aborda conceitos avançados de IoT (Internet of Things) integrados com técnicas modernas de Machine Learning, promovendo o desenvolvimento de soluções inteligentes e conectadas.
 
 Ao longo do semestre, são explorados temas como:
@@ -15,7 +16,7 @@ Ao longo do semestre, são explorados temas como:
 
 ⚙️ Projetos práticos integrando sensores, atuadores e algoritmos inteligentes
 
-🚀 Objetivos do Repositório
+# 🚀 Objetivos do Repositório
 Este repositório tem como objetivo centralizar:
 
 📌 Projetos desenvolvidos na disciplina
@@ -26,7 +27,7 @@ Este repositório tem como objetivo centralizar:
 
 📚 Referências e materiais complementares para estudo
 
-👨‍💻 Autores
+# 👨‍💻 Autores
 Nome do Aluno – Ana Cecília Silveira Fernandes
 
 Inatel – Mestrado em Telecomunicações
