@@ -1,0 +1,183 @@
+#____________Medindo a precisão de um modelo de ML_______________#
+
+-Medir o desempenho de u m modelo de ML ao longo do seu processo de aprendizagem.
+-O processo de treinamento tem como objetivo minimizar o erro, e consequentemente, melhorar o desempenho do modelo.
+
+------- Mapeando X e Y
+x = {-1,0,1,2,3,4}
+y = {-3,-1,1,3,5,7}
+
+Entradas e suas respectivas saídas.
+Qual a relação entre os dois conjuntos? Qual é a função que mapeia x em y?
+Y é uma função de x, nós só não sabemos que função é essa.
+
+-Função Hipótese. 
+Ao plotarmos os pontos, percebemos que existe um arelação linear entre eles.
+Podemos hipotetizar que uma reta explica esse mapeamento.
+Portanto usamos a função de uma reta para definir o mapeamento:
+yhat = a0+a1x
+Agora precisamos encontrar os valores dos pesos a0 e a1.
+
+#Mas se tivermos 2 ou mais atributos (entradas de X) fica difícil plotar os pontos.
+
+- Suposição e Predição
+. Começar atribuindo valores aleatórios para os pesos (a0 = -1 e a1 = 3)
+yhat = {-4,-1,2,5,8,11}
+
+Valor esperado = {-3,-1,1,3,5,7} Os 3 primeiros valores até são próximos, mas os últimos 3 já estão mais distantes.
+
+. Existe uma maneira de formalizarmos um cálculo do quão bom ou ruim essa função hipótese e suas predições são?
+
+.Podemos definir uma métrica de desempenho analisando o gráfico com o valores esperados e preditos.
+
+.Podemos traçar uma reta entre cada ponto, e pelo comprimento dessas retas (ou diferença/distância entre os pontos), descobrir se a função hipótese é boa ou não.
+diff[n] =yhat[n] - y[n].  Podemos calcular a média dos comprimentos para obter o erro médio causado pela função hipótese atual.
+
+. MAs se tiver valores negativos, eles podem anular o positivo, dar um erro 0 e não ser uma boa hipótese.
+
+Para resolver isso, podemos elevar ao quadrado todos os comprimentos, fazendo com que todos eles sejam positivos e não se cancelem mais.
+. Isso não afeta a métrica, pois é aplicado a todos os valores, essa métria é chamado EQM (ERRO QUADRÀTICO MÈDIO)
+
+. Nesse exemplo o resultado deu = 5.17 o que não é bom.
+
+-Vamos supor outros valores, a0 = -2, a1= 2 
+
+entrada
+x = {-1,0,1,2,3,4}
+
+predições
+yhat = {-4,-2,0,2,4,6}
+
+
+valor esperado
+y = {-3,-1,1,3,5,7}
+
+diff² = {1,1,1,1,1,1}
+
+Aqui o EQM = 1, caiu bastante
+Estamos na direção correta.
+Notamos que as retas são paralelas, sendo a única diferença um deslocamento.
+
+O DESLOCAMENTO PODE SER ALTERADO ATRAVÉS DE a0 (COEFICIENTE LINEAR).
+. Aumentar o valor de a0 para -1, fazer novas predições e calcular o erro.
+entrada
+x = {-1,0,1,2,3,4}
+
+predições
+yhat = {-3,-1,1,3,5,7}
+
+
+valor esperado
+y = {-3,-1,1,3,5,7}
+
+diff² = {0,0,0,0,0,0}
+
+A nova suposição mapeia perfeitamente x em y, resultando em um EQM = 0.
+
+
+- O processo iterativo de otimização.
+.Palpite (i.e, pesos),
+.Medida da qualidade do palpite
+.Otimização dos palpites(i.e atualização dos pesos). baseada na informação do erro.
+
+Isso acontece até que algum critério de parada seja atingido: número máximo de iterações, erro cair abaixo de um limiar, etc.
+
+# Outras medidas de Erro#
+
+-Erro quadrático Médio
+-Raiz quadrada do erro quadrático médio -> usadas em problemas de aproximação de curvas
+-Erro Absoluto Médio
+
+
+-Entropia Cruzada (usado em problemas de classificação)
+
+
+
+
+
+
+* MSE - Calcula a média do quadrado da diferença entre os valores preditos e esperados.
+      - Ele penaliza mais(i.e amplifica) erros maiores (devido ao quadrado), o que pode ser 	útil se desejarmos que o modelo seja mais sensível a esses erros.
+
+      - Pode amplificar a influência de outliers
+      - Podem levar o modelo a se concentrar demais em reduzir os erros grandes, em 	detrimento de um bom ajuste geral.
+
+      - A consequência disso é a distorção da função hipótese, fazendo com que ela se 	distancie de um mapeamento que represente o comportamento dos dados "normais"
+
+      - Por usar o quadrado da diferença, a métrica não fica na mesma escala dos dados 	originais. Exemplo, se estivermos predizendo o preço de casa em dólares, os erros estarão em dólares²
+
+*RMSE - Calcula a raiz quadrada do MSE retornando a métrica à mesma escala dos dados          	originais. No exemplo e cima era dólares², aqui seria só dólares.
+	-Útil para interpretar o erro na mesma unidade do rótulo, o que pode facilitar a       	compreensão do impacto do erro.
+	-Também amplifica erros maiores.
+
+*MAE - Representa os erros na mesma escala dos dados originais, facilitando a   	interpretação.
+
+      - Bom quando desejamos um erro mais uniforme em todas as predições e desejamos 	minimizar a influência de outliers.
+	 
+      - Ele não eleva os erros ao quadrado, o que o torna menos sensível a outliers.
+
+
+QUAL USAR?
+Posso fazer uma analise estática para descobrir qual é melhor mas demoraria muito, pq tem que testar todas.
+
+
+
+#_________________REGRESSÃO OU APROXIMAÇÃO DE FUNÇÕES___________________#
+
+-O problema visto neste tópico é conhecido como regressão ou aproximação de funções.
+-A função em formato de reta, que foi definida como função hipótese, é o modelo de ML e o  objetivo da regressão é encontrar os parâmetros (ou pesos) que minimizam a função de erro.
+
+-Em outros casos, além dos pesos, temos que descobrir o formato da função.
+
+
+
+# Ponto de mínimo ou solução ótima.
+
+-O conjunto de treinamento é conhecido e fixo, notamos que a função de erro é função dos pesos do modelo.
+- O objetivo da regressão é encontrar o conjunto e pesos que minimiza a função de erro.
+-Qual conjunto de pesos que resulta no menor erro possível?
+
+
+
+
+-Se plotarmos o erro em função dos pesos, nós plotamos o que é conhecido como superfície de erro.
+- O ponto mais baixo é chamado de ponto de mínimo e nos dá o conjunto de pesos ótimos, ou seja, os pesos que minimizam a função de erro.
+
+
+
+- O algoritmo de otimização, que veremos em breve, caminha através da superfície sempre indo em direção ao seu ponto mais baixo.
+
+
+
+
+
+####Otimização (treinamento) do modelo.
+-Esse processo de busca que tem como objetivo encontrar o ponto que minimiza o erro é chamado de otimização e, no contexto de ML, é conhecido como treinamento do modelo.
+
+(inicializamos o peso de forma aleatória, e a partir do calculo do erro desses pontos, o resultado me da a direção de onde devo ir para aproximar do ponto de mínimo).
+
+
+
+
+-O treinamento (atualização) do modelo se baseia na informação obtida a partir da função de erro.
+
+- O algoritmo é o GRADIENTE DESCENDENTE (GD)
+Calcular a derivada parcial em relação aos pesos, e a cada novo ponto, vou calcular essa derivada parcial novamente, e aplicar uma porcentagem dessa informação para atualizar os meus pesos.
+
+- Ponto inicial aleatório.
+- Em geral, o novo ponto resulta em um erro menor do que o anterior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
