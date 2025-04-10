@@ -1,0 +1,16 @@
+             #_______Versões do Gradiente Descendente________#
+
+-Encontrar o vetor gradiente e substituí-lo na equação de atualizações dos pesos.
+-Gradiente em batelada: uso todas as amostras do conjunto para calcular o M
+-Gradiente Estocástico: uso apenas 1
+-Gradiente em mini-batch: os dois em 1
+
+.O batelada, me da os melhores resultados, é computacionalmente complexo dependendo do tamanho do modelo.
+
+.Estocástico, pega uma única amostra aleatória do conjunto para calcular a estimativa do gradiente. Quando os dados são ruidosos, a estimativa do gradiente é ruidosa, fazendo com que a coerência não ocorra ou não seja garantida.
+
+
+.Mini-Batch, utiliza um subconjunto de exemplos, MB, do conjunto de treinamento (M=MB) para o cálculo do gradiente.
+Usar um subconjunto de exemplos, 1<MB<N, é mais rápido do que o batelada, e mais preciso e estável do que o GDE, essa versão é vista como uma generalização das duas versões anteriores, pois MB pode ser feito igual a 1 ou N. (usado em treinamento de redes neurais).
+
+
