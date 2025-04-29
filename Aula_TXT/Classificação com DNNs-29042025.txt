@@ -1,0 +1,42 @@
+Classificação com DNNs
+- É atribuir classes aos dados de entrada, exemplo, informar o animal presente em uma imagem (i.e., conjunto de pixel).
+Vários algoritmos de ML para solucionar este problema: Regressão Logística e Softmax, Decision tree, maquinas de vetores de suporte, etc.
+-Redes neurais podem também resolver esses problema, basta mudar a função de ativação da camada de saída e a função de erro.
+
+
+Classificação com neurônios
+
+Os neurônios podem ser usados para classificação binária, se usarmos uma função de ativação do tipo sigmoide (ou logística).
+A função de ativação logística, 𝑓(. ), é uma 
+suavização da função degrau e, portanto, derivável, que mapeia os valores de g(x) (intervalo infinito) em valores no intervalo [0,1]
+
+Função discriminante (separa as classes) g(x)
+
+Separa as classes usando hiperplanos.
+
+A probabilidade da classe negativa é 
+obtida através do complemento de y, i.e. 1-y.
+Notem y^ pode assumir qualquer valor no intervalo [0,1], ou seja, esse é um problema de regressão e não de classificação.        É um regressor logístico. 
+
+Para classificar quantizamos os valores de saída da função de ativação
+
+
+Cada saída da rede neural da a probabilidade de uma das classes.
+
+CLASSIFICAÇÃO COM REDES NEURAIS
+-Portanto, se quisermos projetar uma 
+rede neural capaz de distinguir entre 
+gatos e cachorros, poderíamos ter 
+um neurônio de saída 
+representando gatos e outro 
+representando cães.
+-Cada neurônio de saída irá 
+apresentar a probabilidade de uma 
+imagem de entrada pertencer a uma 
+das duas classes
+
+
+
+
+
+
