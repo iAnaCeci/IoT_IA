@@ -1,0 +1,38 @@
+Dataset
+- Treinar uma rede para reconhecer diferentes tipos de calçados. Tarefa similar a esnsinar alguém que nunca viu um calçado antes sobre o que eles realmente são.
+-Normalmente seguindo o workflow do ML, nós:
+.Coletariamos o maior numero possível de imagens de calçados
+.encontraríamos a arquitetura mais apropriada de rede neural.
+.treinaríamos o modelo usando esse conjunto.
+.usaríamos o modelo treinado.
+
+Durante o treinamento o modelo atinge uma acurácia de 100% em apenas 11 épocas mas no TREINAMENTO.
+Separado em 3, treinamento, validação(usa para otimização do modelo) e teste.  Para não haver overfitting.
+O modelo é provavelmente tão complexo que "memorizou" o conjunto de treinamento.
+
+Validação alto/treinamento baixo - sobreajuste
+
+treinamento e erro alto e validação tbm - subajuste (ter os dois erros baixos e próximos)
+
+
+
+
+
+
+Aplicando a metodologia
+
+Treinando o modelo deu 99% nos dados de treinamento, 90% e 80% nos conjuntos de validação(muda os parametros e teste, isso pode indicar. 
+Pode haver sobreajuste, muito bom no treinamento, validação mais ou menos, e no teste ta 20% abaixo, complexidade maior do que necessário. Se diminuir a rede, a acurácia no conjunto de treinamento pode ate diminuir, mas o mais importante é manter a acurácia da rede nos conjuntos de validação e teste o mais próximos do treinamento.
+
+ERRO DE VALIDAÇÃO E DE TREINAMENTO ALTO - UNDERFITTING (SUBAJUSTE)
+
+
+ERRO DE VALIDAÇÃO ALTO E DE TREINAMENTO BAIXO - OVERFITTING (SOBREAJUSTE)
+
+
+OS DOIS BAIXOS - MODELO BOM
+
+
+
+
+ACURÁCIA É O COMPLEMENTO DO ERRO, SE A ACURÁCIA TA ALTA O ERRO TA BAIXO.

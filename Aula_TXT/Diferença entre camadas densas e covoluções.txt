@@ -1,0 +1,47 @@
+Diferença entre camadas densas e convolucionais.
+Camadas convolucionais aprendem hierarquia espaciais de padrões.
+Uma primeira camada de convolução 
+aprenderá pequenos padrões locais, 
+como bordas, uma segunda camada de 
+convolução aprenderá padrões maiores 
+criados a partir da combinação das 
+características das primeiras camadas e 
+assim por diante.
+
+CORES(canais)
+Imagens coloridas têm canais RGB, as imagens nap são em geral objetos bidimensionais mas sim tensores  três dimensões, altura largura e canal
+Cada kernel detecta um tipo particular de característica, como bordas, texturas, padrões ou parte específicas de objetos. Aprendem a detectar as características mais relevantes para tarefa específica em mãos.
+
+
+
+
+
+
+Operação de convolução com 1 canal.
+o símbolo * representa a operação de convolução.
+a saída da operação de convolução é chamada de feature map.
+Tomar cuidado na hora de criar a rede, pois a imagem vai diminuindo, perigoso perder características que ficam na borda da imagem.
+
+STRIDE (quantos pixels eu quero deslocar na minha imagem, anda na linha e coluna)
+Configurar o stride para ao invés de um pixel eu ir de quantas vezes eu quiser
+
+COnvolução ou Correlação cruzada?
+Embora sejam chamadas de convoluções, são implementadas como correlações cruzadas na maioria das bibliotecas. São mais eficientes (sem inversão) e simples de serem implementadas.
+
+
+Operação de convolução com 3 canais (RGB)
+Para entender a operação, 
+podemos dividi-la em 3 
+operações de convolução 
+separadas que têm seus 
+resultados somados ao 
+final para gerar a saída.
+
+Pooling
+Faz uma subamostragem, passa pelo map de característica identificando quais estão mais presentes ali, fica com as maiores ativações
+Padding (preenchimento)
+Depois de aplicar muitas convoluções sucessivas as imagens tendem a ase tornarem consideravelmente menores do que as da entrada.
+O padding garante que todos os pixels contribuam igualmente para a extração de características.
+
+
+Depois das camadas de convoluções temos uma camada de achatamento pq logo dps temos camadas densas para combinar as informações para saber qual imagem tem no final.

@@ -1,0 +1,1 @@
+O algoritmo escolhe aleatoriamente pontos centrais chamados de centroides e cada dado é colocado pra o centroid mais proximo formando um cluster. O objetivo do cluster é dividir os dados em cluster para que os dados similares pertencem ao mesmo grupo 

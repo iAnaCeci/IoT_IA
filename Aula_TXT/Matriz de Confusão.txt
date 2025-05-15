@@ -1,0 +1,23 @@
+Matriz de Confusão:
+Mostra o quão confuso ta o meu classificador, colunas valores verdadeiros e nas linhas os valores preditos.
+Matriz QxQ
+A diagonal principal de C fornece o número de classificações corretas.
+Somar todos os elementos da coluna me da a quantidade de exemplos daquela classe.
+
+
+Acurácia.
+Mede a proporção de exemplos classificados corretamente em relação ao total de exemplos avaliados. Pega os valores da diagonal(acertos) e divide pela quantidade total de exemplos.
+
+= TP+TN/TP+FN+FP+TN
+
+Precisão
+Proporção de exemplos da classe positiva corretamente classificados (TP) em relação a todos os exemplos atribuídos à classe positiva (TP+FP)
+
+
+Recall
+é a proporção de exemplos da classe positiva corretamente classificados.
+
+
+
+
+

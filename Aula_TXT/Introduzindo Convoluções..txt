@@ -1,0 +1,4 @@
+Introduzindo Convoluções.
+Diferença de DNN para CNN ao invés de aprender os pesos das camadas densas, uma CNN aprende os valores de filtro de convolução.
+
+DNN não levam em consideração a estrutura espacial dos dados.

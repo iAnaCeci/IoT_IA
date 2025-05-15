@@ -1,0 +1,40 @@
+Função de ativação RELu
+- Retorna zero quando o valor de entrada é negativo e mantém o valor de entrada quando é positivo.
+Ajuda a mitigar o problema do desaparecimento de gradiente, introduz não linearidade nas redes, permitindo que elas aprendam padrões e a modelar relacionamentos complexos nos dados.
+
+Funções de ativação não lineares permitem que as redes aprendam padrões e modelam relacionamentos complexos nos dados.
+
+RELu agonizante, ocorre quando os neurônios rem saída igual a zero durante o treinamento e, consequentemente, não conseguem atualizar seus pesos durante a retropropagação.
+
+
+
+Softmax:
+Usada na camada de saída de redes neurais empregada em tarefas de classificação, onde a rede precisa atribuir uma probabilidade para cada classe possível.
+Normaliza as saídas, traz para o intervalo de 0 a 1. Interpretar as saídas como sendo uma probabilidade, generalização da função sigmoide. (Somando os valores das saídas, a soma delas tem que resultar em 1).
+
+Usada com problemas multiclasse, cada exemplo pertence a uma e somente a uma classe.
+Quando meu exemplo de entrada pertence a mais de um rótulo (multirótulo) ao mesmo tempo, a saída vai ser uma função sigmoide.
+(Classificar um exemplo em mais de uma classe)
+
+Compilando o modelo:
+Usaremos o otimizador Adam, ajusta adaptativamente passos de aprendizagem independentes dependendo do histórico de gradientes passados, acelerando a convergência do algoritmo.
+
+Usamos entropia cruzada, como função de erro. MSE é uma métrica usada em problemas de regressão, onde queremos predizer valores contínuos.
+
+No entanto, em problemas de classificação, as saídas são categóricas, ou seja, pertencem a um conjunto discreto e finito de valores.
+
+As saídas podem ser codificadas como vetores one-hot ou valores inteiros. 
+
+
+ENTROPIA CRUZADA CATEGÓRICA.
+Mede a diferença entre as distribuições de probabilidade preditas pelo modelo e as distribuições dos rótulos das classes.
+
+ENTROPIA CRUZADA ESPARSA.
+Ao invés de usar codificação one hot para os rótulos, utiliza valores inteiros para indicar a classe a que pertence um exemplo. Útil quando se lida com uma grande quantidade de classes.
+Economiza memória já que apenas um valor inteiro é necessário em vez de um vetor one-hot.
+
+Além disso, há uma diminuição no 
+tempo de cálculo, já que podemos 
+indexar diretamente a probabilidade 
+de saída correta através do índice 
+fornecido pelo rótulo.
