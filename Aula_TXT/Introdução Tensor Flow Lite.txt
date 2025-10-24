@@ -1,0 +1,13 @@
+Introdução Tensor Flow Lite
+-O consumo de energia está relacionado com o ciclo de clock.
+Machine Learning WorkFlow.
+Collect Data > Preprocess Data > Design a Model > Train a Model > Evaluate Optimize > Make Inferences 
+Tiny Machine Learning Workflow depois de Evaluate Optimize, Converter o modelo e fazer o deploy.
+
+Pq usar o tensorFlow?
+-É otimizado para eficiência computacional e de memória.
+-Inclui APIs para Android, iOS e Python.
+-Pode usar delegates para acelerar operações em hardware específico (ex.: GPU, DSP, Coral Edge TPU)
+-Compatibilidade com diversas linguagens.
+
+
